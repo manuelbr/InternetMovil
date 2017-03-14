@@ -34,3 +34,18 @@ información va en la capa de enlace, a muy bajo nivel.
 de posición.
 * Una dirección ip no identifica dispositivos en internet, sino lugares físicos, ya que cambian al movernos de un sitio a otro con el mismo dispositivo.
 * La transparencia en el IETF del protocolo IP se basa en la idea de que aunque una ip es variable en función de la localización, todo dispositivo tiene que tener una ip fija inalterable.
+* ICMP e IGMP son protocolos que están montados sobre ip. IGMP se usa para distribuir datos a grupos de direcciones.
+* En el encapsulamiento de los datos que se envían por ip, si los datos pertenecen a una capa N, 
+se le van añadiendo las cabeceras de las capas inferiores, hasta estar recubierto por todas.
+* El proceso de conexión con ip movil es: descubrimiento de los puntos de acceso disponibles, registro en la red remota, visitante y Tunneling.
+* El care-of-address es la dirección que hemos obtenido en la fase de descubrimiento.
+* El PAP es un protocolo de autenticación, según el cuál nos identificamos con contraseñas que son conocidas por las dos partes que participan en la acción.
+* El tunneling es la transferencia de los datos una vez que se ha hecho el descubrimiento y conexión con el agente remoto. Lo que se hace es encapsular y abstraer los datos de direcciones ip locales y externas, dentro de otra capa ip. Los datos de esas direcciones son básicamente: dirección origen y dirección destino. El tunneling se basa en abstraer estas direcciones para no tener que ver a alto nivel las conexiones con nodos externos al emisor y al receptor, simulando una conexión punto a punto. El tunneling inverso consiste en que hay que hacer un filtrado de ips entrantes y salientes para evitar que haya alguien en medio que intercepte los mensajes de los que eres partícipe (si fuera así las direcciones de origen de los paquetes que salen serían diferentes a la ip verdadera del emisor).
+* La recogida de la información que se transfiere por Tunneling se
+* ARP es un protocolo de resolución de direcciones que asigna una dirección MAC física a una ip. Hace la correlación entre estos dos términos.
+###IPv6
+* El servicio de diferenciado, la clase de transferencia de datos del protocolo ip6 se usa para diferenciar entre paquetes prioritarios y normales en una transferencia.
+* La fragmentación en ip6 hace referencia a paquetes divididos que deben ser reorganizados cuando se tienen todos, haciendo caso a la etiqueta offset de la cabecera, que dice por donde se conecta un paquete con el conjunto al que pertenece como fragmento de él.
+* La cabecera de Autenticación se basa en que el receptor decide si la información que recibe es correcta o no. Para ello se usa el CRC, que es un sistema de pares de bits según el cuál se comprueba que lo que se ha transmitido entre un punto y otro no ha sido alterado. Es como un par de contraseñas entre el emisor y el receptor.
+
+
