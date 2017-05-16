@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Battery Advisor</string>
+
+    <string name="title">Battery Advisor\n por Manuel Blanco</string>
+    <string name="comienzo">Comenzar muestreo</string>
+    <string name="parar">Parar muestreo</string>
+    <string name="estadisticas">Estadísticas</string>
+    <string name="version">1.0</string>
+    <string name="versionstring">Versión</string>
+</resources>
